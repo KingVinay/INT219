@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',serif;
+  scroll-behavior: smooth;
+}
+body 
+{
+  min-height:100vh;
+  background: linear-gradient(#2b1055,#7597de);
+  overflow-x: hidden;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo 
+{
+ color: #fff;
+ font-weight: 700;
+ text-decoration: none;
+ font-size: 2em;
+ text-transform: uppercase;  
+ letter-spacing: 2px; 
+}
+header ul
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul li
+{
+  list-style: none; 
+  margin-left: 20px;
+}
+header ul li a
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff; 
+  border-radius: 20px;
+}
+header ul li a:hover ,
+.active
+{
+  background: #fff;
+  color: #2b1055;
+}
+section
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section::before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to top,#1c0522,transparent);
+  z-index: 1000;
+  
+}
+
+section img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+section img#moon
+{
+   mix-blend-mode:screen;
+}
+section img#mountains_front
+{
+  z-index: 10;
+}
+#text
+{
+  position: absolute;
+  right: -150px;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+}
+#btn
+{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+}
+.sec
+{
+  position: relative;
+  padding: 100px;
+  background-color: #1c0522;
+}
+.sec h2
+{
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #A020F0;
+}
+.sec h4
+{
+  position: relative;
+  font-size: 1.5em;
+  z-index: 9;
+  padding: 5px 10px;
+  color: #fff;
+}
+.sec ul
+{
+  position: relative;
+}
+.sec ul li
+{
+  font-size:1.5em;
+  position: relative;
+  list-style: none;
+  display: table;
+  margin: 15px 0;
+  padding-left: 34px;
+  padding-right: 5px;
+}
+.sec ul li::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border-radius: 34px;
+  transition: background 0.5s, width 0.5s;
+  transition-delay: 0.5s,0s;
+  border: 2px solid #A020F0;
+  box-sizing: border-box;
+}
+.sec ul li:hover::before
+{
+  width: 100%;
+  background: #880ED4;
+  transition-delay: 0s,0.5s;
+}
+.sec ul li::after
+{
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+.sec ul li:hover::after
+{
+  left: 24px;
+  transform: rotate(45deg) scale(1.5);
+  transition-delay: 0.5s;
+}
+
+.sec ul li p
+{
+  position: relative;
+  z-index: 9;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.sec .container
+{
+  position: relative;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+  grid-template-rows: auto;
+  grid-gap:0 40px;
+}
+.sec .container .box
+{
+  position:relative;
+  height: 500px;
+  background: #2b1055;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+}
+
+.content
+{
+  position: relative;
+  padding: 20px;
+  transform:translateY(40px);
+  
+}
+.box .content h2
+{
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 10em;
+  color: rgba(255,255,255,.05);
+  transition: 0.5s;
+}
+.box:hover .content h2
+{
+  top: -125px;
+}
+.box .content h3
+{
+  margin: 0 0 10px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+.box .content p
+{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 15px; 
+}
+.box .content a
+{
+  position: relative;
+  margin: 20px 0 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  display: inline-block;
+  color: #fff;
+  transition: 0.5s;
+  transform: translateY(-60px);
+  opacity: 0;
+  visibility: hidden;
+
+}
+.box:hover .content a
+{
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.box .content a:hover
+{
+  color: #000;
+  background: #fff;
+}
+
+
+
+
+
+
+
+
+

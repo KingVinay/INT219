@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OFÉLI (Benefits)</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel = "icon" href = "static/Logo.png" type = "image/x-icon">
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">oféli</a>
+  
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Work</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  </header>
+
+  <section>
+    <img src="static/stars.png" id="stars">
+    <img src="static/moon.png" id="moon">
+    <img src="static/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">Moon Light</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="static/mountains_front.png" id="mountains_front">
+  </section>
+  
+  <div class="sec"id="sec">
+
+    <h2>Can the moon light really influence your health?</h2>
+    <br>
+    <h4>On most nights, it’s possible to look up and see one of the moon’s many faces. From harvest moon to blood moon, from crescent to quarter to full, the moon remains a familiar presence in the sky.
+
+      The moon is probably one of the first celestial bodies you learned to recognize. Many people consider its light somewhat special, since it has the power to brighten the darkest corners of the night. Is it any wonder, then, that cultures around the world revere the moon as sacred — even magical?
+      
+      The moon plays an important role in Earth’s tides, and its phases help people keep track of passing months and seasons. There are also plenty of myths and legends about the moon’s power, though science has yet to find support for the more mystical among them.
+      
+      Still, exposure to moonlight can lead to feelings of awe and peace, along with a greater sense of connection to the universe.
+    </h4>
+    <br> <br>
+    <center>
+    <div class="container">
+
+    <div class="box">
+      <div class="content">
+        <h2>01</h2>
+        <h3>Moonlight and Sleep</h3>
+        <br>
+        <p>
+           Once more, the evidence is not abundant and is primarily based on small-scale studies, but it does seem to suggest that the full moon can affect a person’s quality of sleep.The lunar cycle seems to influence human sleep, even when one does not ‘see’ the moon and is not aware of the actual moon phase.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <h2>02</h2>
+        <h3>Moonlight and Mental Health</h3>
+        <br>
+        <p>
+          Another widely held notion has it that the moon influences mood and psychiatric health, and that the full moon, in particular, can make people more aggressive. The reasons for the persistence of such beliefs may not be found in a rational understanding but more in a primal, emotional desire to believe that we are not solely responsible for our own behaviors
+        </p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <h2>03</h2>
+        <h3>Moonlight and Menstrual Cycles</h3>
+        <br>
+        <p>
+          Some people still refer to menstrual cycles as “moon cycles,” and many remain convinced that there is a form of synchronicity between the phases of the moon and female menses. Some of these studies also found correlations between moon phases, changes in the levels of melatonin — a hormone that helps regulate sleep-wake cycles.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+  </div>
+  </center>
+    
+    <br> <br>
+    <center>
+    <h2>Benefits of Moon Light On Us -</h2>
+    <br>
+    <ul >
+      <li><p>Helps to clear Sacral Chakra</p></li>
+      <li><p>Reduces Stress and Anxiety</p></li>
+      <li><p>Provides the body with Vitamin D</p></li>
+      <li><p>Aids in Spiritual Awakenings</p></li>
+      <li><p>Strengthens Natural Instincts</p></li>
+    </ul>
+  </center>
+  </div>
+
+  <script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll',function() 
+    {
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px';
+      moon.style.top = value * 1 + 'px';
+      mountains_behind.style.top = value * 0.50 + 'px';
+      mountains_front.style.top = value * 0 + 'px';
+      text.style.marginRight = value * 4 + 'px';
+      text.style.marginTop = value * 1.5 + 'px';
+      btn.style.marginTop = value * 1.5 + 'px';
+      header.style.top = value * 0.5 + 'px';
+    })
+
+    if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+} else {
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+}
+  </script>
+</body>
+</html>
